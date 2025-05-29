@@ -1,0 +1,68 @@
+# ===============================
+# Node.js (React Frontend)
+# ===============================
+node_modules/
+build/
+dist/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===============================
+# Firebase
+# ===============================
+.firebase/
+.firebaserc
+firebase-debug.log
+firebase-debug.*
+functions/node_modules/
+
+# ===============================
+# Python (Backend)
+# ===============================
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+*.pyo
+.Python
+env/
+venv/
+ENV/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+*.sqlite3
+instance/
+.pytest_cache/
+.mypy_cache/
+coverage/
+*.db
+*.log
+
+# Flask or FastAPI env files
+config.py
+*.env
+
+# ===============================
+# VS Code & Editor Stuff
+# ===============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===============================
+# Tailwind (PostCSS, etc.)
+# ===============================
+.postcssrc
+.tailwind.config.js
+*.css.map
+
+# ===============================
+# OS-Specific
+# ===============================
+.DS_Store
+Thumbs.db
