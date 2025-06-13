@@ -6,7 +6,14 @@ import os
 def create_app():
     app = Flask(__name__)
     
+    enviroment = os.environ.get("ENVIRONMENT", "development")
     frontend_url = os.environ.get("FRONTEND_URL", "http://localhost:5173")
+
+    if enviroment == "development":
+        frontend_url = "http://localhost:5173"
+    elif enviroment == "production":
+        frontend_url = os.environ.get("FRONTEND_URL")
+
     CORS(app, resources={r"/*": {"origins": frontend_url}})
     
     register_routes(app)
