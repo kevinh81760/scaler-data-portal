@@ -95,8 +95,7 @@ def register_routes(app):
     @app.route("/data")
     def get_google_sheet_data():
         if not _is_internal(request.headers.get("Authorization", "").replace("Bearer ", "")):
-            print("permission-denied not internal")
-            return jsonify({"error", "Permission denied"}), 403
+            return jsonify({"error": "Permission denied"}), 403
 
         # Configuration for all sheets to be fetched.
         # This structure makes it easy to add more sheets in the future.
